@@ -1,0 +1,9 @@
+<suite name="Main Test Suite" parallel="tests" verbose="1">
+    <test name="Grid firefox Test">
+    
+        <classes>
+        <class name="airlines.helper.LoginHelper"/>
+        </classes>
+    </test>
+  
+</suite>

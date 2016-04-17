@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Main Test Suite]" parallel="tests">
+  <test name="Grid firefox Test(failed)" parallel="tests">
+    <classes>
+      <class name="airlines.helper.LoginHelper">
+        <methods>
+          <include name="init"/>
+          <include name="testLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- airlines.helper.LoginHelper -->
+    </classes>
+  </test> <!-- Grid firefox Test(failed) -->
+</suite> <!-- Failed suite [Main Test Suite] -->
