@@ -1,8 +1,8 @@
 package airlines.tests;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import airlines.helper.FlightFinderHelper;
@@ -19,7 +19,7 @@ public class TestSample {
 	LoginHelper lh;
 	FlightFinderHelper ffh;
 	MyDriver driver;
-	@BeforeTest
+	@BeforeSuite
 	public void init()
 	{
 		System.out.println("init");
@@ -38,7 +38,7 @@ public class TestSample {
 		System.out.println("bookflight ended");
 	}
 	
-	@AfterTest
+	@AfterSuite
 	public void tearDown()
 	{
 		System.out.println("tearDown");
