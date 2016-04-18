@@ -12,50 +12,27 @@ import airlines.pages.FlightConfirmationPage;
 import airlines.pages.FlightFinderPage;
 import airlines.pages.LoginPage;
 import airlines.pages.SelectFlightPage;
+import airlines.utils.MyDriver;
 
 public class LoginHelper {
-FirefoxDriver driver;
+MyDriver driver;
 LoginPage loginpage;
-FlightFinderPage flightfinderpage;
-BookFlightPage bookflightpage;
-FlightConfirmationPage flightconfirmationpage;
-SelectFlightPage selectflightpage;
 
-@BeforeTest
-public void init()
+public LoginHelper(MyDriver driver)
 {
-	System.out.println("init");
-    driver = new FirefoxDriver();
-    driver.get("http://newtours.demoaut.com");
-    flightfinderpage=new FlightFinderPage(driver);
-    loginpage=new LoginPage(driver);
-    bookflightpage=new BookFlightPage(driver);
-    flightconfirmationpage=new FlightConfirmationPage(driver);
-    selectflightpage=new SelectFlightPage(driver);
+	this.driver=driver;
+	loginpage=new LoginPage(driver);
 }
 
-@Test
-public void testLogin() throws InterruptedException
-{
-	System.out.println("testLogin");
-	loginpage.login("mercury", "mercury");
-	Thread.sleep(5000);
-	flightfinderpage.searchFlight();
-	Thread.sleep(5000);
-	selectflightpage.selectFlight();
 
-	Thread.sleep(5000);
-	bookflightpage.bookFlight();
-	Thread.sleep(5000);
-	flightconfirmationpage.confirmFlight();
-	
+
+public void Login() throws InterruptedException
+{
+	loginpage.gettxtUserName().sendKeys("mercury");
+	loginpage.gettxtPassword().sendKeys("mercury");
+     Thread.sleep(5000);
+	loginpage.getLoginButton().click();
 }
 
-@AfterTest
-public void tearDown()
-{
-	System.out.println("tearDown");
-	driver.quit();
-}
 
 }

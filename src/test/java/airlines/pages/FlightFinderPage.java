@@ -1,7 +1,9 @@
 package airlines.pages;
 
+import java.util.Collection;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,55 +11,112 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import airlines.utils.ElementIdentifier;
+import airlines.utils.MyDriver;
 
 public class FlightFinderPage {
 
-WebDriver driver;
+MyDriver driver;
 
-@FindBy(how=How.XPATH, using="//input[@name='tripType']")
-private WebElement rdTripType;
-
-@FindBy(how=How.XPATH, using="//select[@name='passCount']")
-private WebElement dPassengers;
-
-@FindBy(how=How.XPATH, using="//select[@name='fromPort']")
-private WebElement dDepartingFrom;
-
-@FindBy(how=How.XPATH, using="//select[@name='fromMonth']")
-private WebElement dFromMonth;
-
-@FindBy(how=How.XPATH, using="//select[@name='fromDay']")
-private WebElement dFromDay;
+By firstClass = By.xpath("//input[@name='servClass' and @value='First']");
+By econClass =  By.xpath("//input[@name='servClass' and @value='Coach']");
+By busClass = By.xpath("//input[@name='servClass' and @value='Business']");
 
 
-@FindBy(how=How.XPATH, using="//select[@name='toPort']")
-private WebElement dArrivingIn;
+By owTripType = By.xpath("//input[@name='tripType' and @value='oneway']");
+By rdTripType = By.xpath("//input[@name='tripType' and @value='roundtrip']");
 
-@FindBy(how=How.XPATH, using="//select[@name='toMonth']")
-private WebElement dToMonth;
+By Passengers = By.xpath("//select[@name='passCount']");
+By dDepartingFrom = By.xpath("//select[@name='fromPort']");
+By dFromMonth = By.xpath("//select[@name='fromMonth']");
+By dFromDay = By.xpath("//select[@name='fromDay']");
+By dArrivingIn = By.xpath("//select[@name='toPort']");
+By dToMonth = By.xpath("//select[@name='toMonth']");
+By dToDay = By.xpath("//select[@name='toDay']");
 
-@FindBy(how=How.XPATH, using="//select[@name='toDay']")
-private WebElement dToDay;
+By dAirline = By.xpath("//select[@name='airline']");
+By btnContinue = By.xpath("//input[@name='findFlights']");
 
 
-@FindBy(how=How.XPATH, using="//input[@name='servClass']")
-private WebElement rdServiceClass;
-
-@FindBy(how=How.XPATH, using="//select[@name='airline']")
-private WebElement dAirline;
-
-@FindBy(how=How.XPATH, using="//input[@name='findFlights']")
-private WebElement btnContinue;
-
-public FlightFinderPage(WebDriver driver)
+public FlightFinderPage(MyDriver driver)
 {	
 	this.driver=driver;
-	PageFactory.initElements(driver, this);
+	//PageFactory.initElements(driver, this);
+
 }
-public void searchFlight()
+
+
+public ElementIdentifier Passengers()
 {
-	btnContinue.click();
+ return new ElementIdentifier(driver.findElement(Passengers));
+
 }
+public ElementIdentifier TripType(String type)
+{
+	if(type.equalsIgnoreCase("ONE WAY"))
+	{
+		return new ElementIdentifier(driver.findElement(owTripType));
+	}
+	else
+	{
+		return new ElementIdentifier(driver.findElement(rdTripType));
+	}
+	 
+}
+
+public ElementIdentifier DepartingFrom()
+{
+	return new ElementIdentifier(driver.findElement(dDepartingFrom));
+}
+
+public ElementIdentifier FromMonth()
+{
+	return new ElementIdentifier(driver.findElement(dFromMonth));
+}
+
+public ElementIdentifier FromDay()
+{
+	return new ElementIdentifier(driver.findElement(dFromDay));
+}
+
+public ElementIdentifier ArrivingIn()
+{
+	return new ElementIdentifier(driver.findElement(dArrivingIn));
+}
+
+public ElementIdentifier ToMonth()
+{
+	return new ElementIdentifier(driver.findElement(dToMonth));
+}
+public ElementIdentifier ToDay()
+{
+	return new ElementIdentifier(driver.findElement(dToDay));
+}
+public ElementIdentifier ServiceClass(String classType)
+{
+	switch(classType.toUpperCase())
+	{
+	case "ECONOMY":
+		return new ElementIdentifier(driver.findElement(econClass));
+		
+	case "BUSINESS":
+		return new ElementIdentifier(driver.findElement(busClass));		
+	case "FIRST":
+		return new ElementIdentifier(driver.findElement(firstClass));		
+	}
+	return null;
+	
+}
+public ElementIdentifier Airline()
+{
+	return new ElementIdentifier(driver.findElement(dAirline));
+}
+public ElementIdentifier btnContinue()
+{
+	return new ElementIdentifier(driver.findElement(btnContinue));
+}
+
+
+
 
 
 

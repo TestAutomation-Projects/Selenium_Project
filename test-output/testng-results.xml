@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Main Test Suite" duration-ms="54506" started-at="2016-04-17T20:59:58Z" finished-at="2016-04-17T21:00:53Z">
+  <suite name="Main Test Suite" duration-ms="27771" started-at="2016-04-18T00:29:46Z" finished-at="2016-04-18T00:30:14Z">
     <groups>
     </groups>
-    <test name="Grid firefox Test" duration-ms="54506" started-at="2016-04-17T20:59:58Z" finished-at="2016-04-17T21:00:53Z">
-      <class name="airlines.helper.LoginHelper">
-        <test-method status="PASS" signature="init()[pri:0, instance:airlines.helper.LoginHelper@357246de]" name="init" is-config="true" duration-ms="6272" started-at="2016-04-17T16:59:58Z" finished-at="2016-04-17T17:00:05Z">
+    <test name="Grid firefox Test" duration-ms="27771" started-at="2016-04-18T00:29:46Z" finished-at="2016-04-18T00:30:14Z">
+      <class name="airlines.tests.TestSample">
+        <test-method status="PASS" signature="init()[pri:0, instance:airlines.tests.TestSample@357246de]" name="init" is-config="true" duration-ms="6979" started-at="2016-04-17T20:29:46Z" finished-at="2016-04-17T20:29:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:airlines.helper.LoginHelper@357246de]" name="testLogin" duration-ms="47608" started-at="2016-04-17T17:00:05Z" finished-at="2016-04-17T17:00:52Z">
+        <test-method status="PASS" signature="BookFlight()[pri:0, instance:airlines.tests.TestSample@357246de]" name="BookFlight" duration-ms="20222" started-at="2016-04-17T20:29:53Z" finished-at="2016-04-17T20:30:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:airlines.helper.LoginHelper@357246de]" name="tearDown" is-config="true" duration-ms="593" started-at="2016-04-17T17:00:52Z" finished-at="2016-04-17T17:00:53Z">
+        </test-method> <!-- BookFlight -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:airlines.tests.TestSample@357246de]" name="tearDown" is-config="true" duration-ms="556" started-at="2016-04-17T20:30:13Z" finished-at="2016-04-17T20:30:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- airlines.helper.LoginHelper -->
+      </class> <!-- airlines.tests.TestSample -->
     </test> <!-- Grid firefox Test -->
   </suite> <!-- Main Test Suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Main Test Suite]" parallel="tests">
   <test name="Grid firefox Test(failed)" parallel="tests">
     <classes>
-      <class name="airlines.helper.LoginHelper">
+      <class name="airlines.tests.TestSample">
         <methods>
-          <include name="init"/>
-          <include name="testLogin"/>
           <include name="tearDown"/>
+          <include name="BookFlight"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- airlines.helper.LoginHelper -->
+      </class> <!-- airlines.tests.TestSample -->
     </classes>
   </test> <!-- Grid firefox Test(failed) -->
 </suite> <!-- Failed suite [Main Test Suite] -->

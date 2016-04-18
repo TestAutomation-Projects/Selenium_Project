@@ -2,7 +2,7 @@
     <test name="Grid firefox Test">
     
         <classes>
-        <class name="airlines.helper.LoginHelper"/>
+        <class name="airlines.tests.TestSample"/>
         </classes>
     </test>
   
