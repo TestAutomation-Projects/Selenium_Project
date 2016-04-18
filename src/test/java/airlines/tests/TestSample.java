@@ -27,12 +27,15 @@ public class TestSample {
 	    driver.get("http://newtours.demoaut.com");
 	    lh=new LoginHelper(driver);
 	    ffh=new FlightFinderHelper(driver);
+	    System.out.println("init completed");
 	}
 	@Test
 	public void BookFlight() throws InterruptedException
 	{
+		 System.out.println("bookflight started");
 		lh.Login();
 		ffh.findFlight();
+		System.out.println("bookflight ended");
 	}
 	
 	@AfterTest
