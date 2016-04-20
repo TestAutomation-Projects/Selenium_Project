@@ -28,7 +28,7 @@ public FlightFinderHelper(MyDriver driver)
 
 public void findFlight() throws InterruptedException
 {
-	flightfinderpage.TripType("One Way").click();
+	flightfinderpage.TripType("Round Trip").click();
 	flightfinderpage.Passengers().selectByValue("3");
 	flightfinderpage.DepartingFrom().selectByValue("Frankfurt");
 	flightfinderpage.FromMonth().selectByText("May");
@@ -37,6 +37,23 @@ public void findFlight() throws InterruptedException
 	flightfinderpage.ToMonth().selectByText("June");
 	flightfinderpage.ToDay().selectByValue("25");
 	flightfinderpage.ServiceClass("BUSINESS").click();
+	Thread.sleep(5000);
+	flightfinderpage.btnContinue().click();
+	Thread.sleep(5000);
+	
+}
+
+public void findFlight(String sTripType,String iPassengers,String sDepartingFrom,String sFromMonth,String sFromDay,String sReturnTo, String sToMonth,String sToDay,String sServiceClass) throws InterruptedException
+{
+	flightfinderpage.TripType(sTripType).click();
+	flightfinderpage.Passengers().selectByValue(iPassengers);
+	flightfinderpage.DepartingFrom().selectByValue(sDepartingFrom);
+	flightfinderpage.FromMonth().selectByText(sFromMonth);
+	flightfinderpage.FromDay().selectByValue(sFromDay);
+	flightfinderpage.ArrivingIn().selectByValue(sReturnTo);
+	flightfinderpage.ToMonth().selectByText(sToMonth);
+	flightfinderpage.ToDay().selectByValue(sToDay);
+	flightfinderpage.ServiceClass(sServiceClass).click();
 	Thread.sleep(5000);
 	flightfinderpage.btnContinue().click();
 	Thread.sleep(5000);

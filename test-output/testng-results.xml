@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Main Test Suite" duration-ms="27771" started-at="2016-04-18T00:29:46Z" finished-at="2016-04-18T00:30:14Z">
+  <suite name="Main Test Suite" duration-ms="48419" started-at="2016-04-20T01:28:52Z" finished-at="2016-04-20T01:29:41Z">
     <groups>
     </groups>
-    <test name="Grid firefox Test" duration-ms="27771" started-at="2016-04-18T00:29:46Z" finished-at="2016-04-18T00:30:14Z">
+    <test name="Grid firefox Test" duration-ms="48419" started-at="2016-04-20T01:28:52Z" finished-at="2016-04-20T01:29:41Z">
       <class name="airlines.tests.TestSample">
-        <test-method status="PASS" signature="init()[pri:0, instance:airlines.tests.TestSample@357246de]" name="init" is-config="true" duration-ms="6979" started-at="2016-04-17T20:29:46Z" finished-at="2016-04-17T20:29:53Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:airlines.tests.TestSample@649d209a]" name="init" is-config="true" duration-ms="6313" started-at="2016-04-19T21:28:46Z" finished-at="2016-04-19T21:28:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="BookFlight()[pri:0, instance:airlines.tests.TestSample@357246de]" name="BookFlight" duration-ms="20222" started-at="2016-04-17T20:29:53Z" finished-at="2016-04-17T20:30:13Z">
+        <test-method status="PASS" signature="BookFlight()[pri:0, instance:airlines.tests.TestSample@649d209a]" name="BookFlight" duration-ms="48406" started-at="2016-04-19T21:28:52Z" finished-at="2016-04-19T21:29:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookFlight -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:airlines.tests.TestSample@357246de]" name="tearDown" is-config="true" duration-ms="556" started-at="2016-04-17T20:30:13Z" finished-at="2016-04-17T20:30:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:airlines.tests.TestSample@649d209a]" name="tearDown" is-config="true" duration-ms="608" started-at="2016-04-19T21:29:41Z" finished-at="2016-04-19T21:29:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

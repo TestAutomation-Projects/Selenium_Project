@@ -26,10 +26,10 @@ public LoginHelper(MyDriver driver)
 
 
 
-public void Login() throws InterruptedException
+public void Login(String username,String password) throws InterruptedException
 {
-	loginpage.gettxtUserName().sendKeys("mercury");
-	loginpage.gettxtPassword().sendKeys("mercury");
+	loginpage.gettxtUserName().sendKeys(username);
+	loginpage.gettxtPassword().sendKeys(password);
      Thread.sleep(5000);
 	loginpage.getLoginButton().click();
 }
