@@ -1,6 +1,7 @@
 package airlines.helper;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -12,16 +13,15 @@ import airlines.pages.FlightConfirmationPage;
 import airlines.pages.FlightFinderPage;
 import airlines.pages.LoginPage;
 import airlines.pages.SelectFlightPage;
-import airlines.utils.MyDriver;
 
 public class FlightFinderHelper {
-MyDriver driver;
+	RemoteWebDriver driver;
 FlightFinderPage flightfinderpage;
 
-public FlightFinderHelper(MyDriver driver)
+public FlightFinderHelper(RemoteWebDriver driver2)
 {
-	this.driver=driver;
-	flightfinderpage=new FlightFinderPage(driver);
+	this.driver=driver2;
+	flightfinderpage=new FlightFinderPage(driver2);
 }
 
 

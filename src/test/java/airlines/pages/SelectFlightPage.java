@@ -3,23 +3,44 @@ package airlines.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import airlines.utils.ElementIdentifier;
-import airlines.utils.MyDriver;
 
 public class SelectFlightPage {
-MyDriver driver;
+	RemoteWebDriver driver;
 
 
 
-public SelectFlightPage(MyDriver driver)
+public SelectFlightPage(RemoteWebDriver driver)
 {	this.driver=driver;
 	PageFactory.initElements(driver, this);
 }
 
+public ElementIdentifier DepartingItinerary()
+{
+	By sDepartingitinerary = By.xpath("//font[text()='DEPART']//following::tr[1]/td[1]/b/font");
+	return new ElementIdentifier(driver.findElement(sDepartingitinerary));
+}
+public ElementIdentifier DepartingDate()
+{
+	By sDepartingDate = By.xpath("//font[text()='DEPART']//following::tr[1]/td[2]/b/font");
+	return new ElementIdentifier(driver.findElement(sDepartingDate));
+}
+
+public ElementIdentifier ReturningItinerary()
+{
+	By sReturningItinerary = By.xpath("//font[text()='RETURN']//following::tr[1]/td[1]/b/font");
+	return new ElementIdentifier(driver.findElement(sReturningItinerary));
+}
+public ElementIdentifier ReturningDate()
+{
+	By sReturningDate = By.xpath("//font[text()='RETURN']//following::tr[1]/td[2]/b/font");
+	return new ElementIdentifier(driver.findElement(sReturningDate));
+}
 
 public ElementIdentifier DepartFlight(String flightName)
 {
@@ -89,4 +110,5 @@ public ElementIdentifier Continue()
 	By sContinue = By.xpath("//input[@name='reserveFlights']");
 	return new ElementIdentifier(driver.findElement(sContinue));
 }
+
 }

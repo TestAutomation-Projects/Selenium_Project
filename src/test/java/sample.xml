@@ -1,6 +1,11 @@
 <suite name="Main Test Suite" parallel="tests" verbose="1">
+     <parameter name="browserType" value="firefox"/>
+    <parameter name="host" value="192.168.0.22"/>    
+     <parameter name="port" value="5555"/>
+     <parameter name="platform" value="WINDOWS"/>
+            
     <test name="Grid firefox Test">
-    
+   
         <classes>
         <class name="airlines.tests.TestSample"/>
         </classes>

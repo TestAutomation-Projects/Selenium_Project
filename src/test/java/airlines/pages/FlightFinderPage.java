@@ -6,16 +6,16 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import airlines.utils.ElementIdentifier;
-import airlines.utils.MyDriver;
 
 public class FlightFinderPage {
 
-MyDriver driver;
+	RemoteWebDriver driver;
 
 By firstClass = By.xpath("//input[@name='servClass' and @value='First']");
 By econClass =  By.xpath("//input[@name='servClass' and @value='Coach']");
@@ -37,7 +37,7 @@ By dAirline = By.xpath("//select[@name='airline']");
 By btnContinue = By.xpath("//input[@name='findFlights']");
 
 
-public FlightFinderPage(MyDriver driver)
+public FlightFinderPage(RemoteWebDriver driver)
 {	
 	this.driver=driver;
 	//PageFactory.initElements(driver, this);

@@ -1,6 +1,7 @@
 package airlines.helper;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -12,16 +13,15 @@ import airlines.pages.FlightConfirmationPage;
 import airlines.pages.FlightFinderPage;
 import airlines.pages.LoginPage;
 import airlines.pages.SelectFlightPage;
-import airlines.utils.MyDriver;
 
 public class LoginHelper {
-MyDriver driver;
+	RemoteWebDriver driver;
 LoginPage loginpage;
 
-public LoginHelper(MyDriver driver)
+public LoginHelper(RemoteWebDriver driver2)
 {
-	this.driver=driver;
-	loginpage=new LoginPage(driver);
+	this.driver=driver2;
+	loginpage=new LoginPage(driver2);
 }
 
 
