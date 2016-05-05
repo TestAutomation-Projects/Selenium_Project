@@ -1,14 +1,32 @@
-<suite name="Main Test Suite" parallel="tests" verbose="1">
-     <parameter name="browserType" value="firefox"/>
+<suite name="Main Test Suite" parallel="tests" verbose="1">       
+    <test name="Grid firefox Test">
+   <parameter name="browserType" value="firefox"/>
     <parameter name="host" value="192.168.0.22"/>    
      <parameter name="port" value="5555"/>
      <parameter name="platform" value="WINDOWS"/>
-            
-    <test name="Grid firefox Test">
-   
         <classes>
         <class name="airlines.tests.TestSample"/>
         </classes>
     </test>
-  
+	   <test name="Grid android chrome Test">
+    	<parameter name="browserType" value="chrome"/>
+     	<parameter name="host" value="127.0.0.1"/>
+      	<parameter name="port" value="4725"/>
+        <parameter name="platform" value="ANDROID"/>           
+        <Parameter name="deviceId" value="1e1578fe"/>
+        <classes>
+        <class name="airlines.tests.TestSample"/>
+        </classes>
+    </test>
+    
+   <test name="Grid android chrome Test2">
+    	<parameter name="browserType" value="chrome"/>
+     	<parameter name="host" value="127.0.0.1"/>
+      	<parameter name="port" value="4723"/>
+        <parameter name="platform" value="ANDROID"/>           
+        <Parameter name="deviceId" value="8f20e816"/>
+        <classes>
+        <class name="airlines.tests.TestSample"/>
+        </classes>
+    </test>
 </suite>

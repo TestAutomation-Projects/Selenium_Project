@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Main Test Suite]" parallel="tests">
-  <parameter name="port" value="5555"/>
-  <parameter name="host" value="192.168.0.22"/>
-  <parameter name="platform" value="WINDOWS"/>
-  <parameter name="browserType" value="firefox"/>
-  <test name="Grid firefox Test(failed)" parallel="tests">
+  <parameter name="port" value="4723"/>
+  <parameter name="host" value="127.0.0.1"/>
+  <parameter name="platform" value="ANDROID"/>
+  <parameter name="browserType" value="chrome"/>
+  <test name="Grid android chrome Test2(failed)" parallel="tests">
+    <parameter name="port" value="4723"/>
+    <parameter name="host" value="127.0.0.1"/>
+    <parameter name="platform" value="ANDROID"/>
+    <parameter name="browserType" value="chrome"/>
     <classes>
       <class name="airlines.tests.TestSample">
         <methods>
           <include name="tearDown"/>
+          <include name="tearDown"/>
           <include name="BookFlight"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- airlines.tests.TestSample -->
+    </classes>
+  </test> <!-- Grid android chrome Test2(failed) -->
+  <test name="Grid firefox Test(failed)" parallel="tests">
+    <parameter name="port" value="5555"/>
+    <parameter name="host" value="192.168.0.22"/>
+    <parameter name="platform" value="WINDOWS"/>
+    <parameter name="browserType" value="firefox"/>
+    <classes>
+      <class name="airlines.tests.TestSample">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="BookFlight"/>
+          <include name="init"/>
+          <include name="init"/>
           <include name="init"/>
         </methods>
       </class> <!-- airlines.tests.TestSample -->
     </classes>
   </test> <!-- Grid firefox Test(failed) -->
+  <test name="Grid android chrome Test(failed)" parallel="tests">
+    <parameter name="port" value="4725"/>
+    <parameter name="host" value="127.0.0.1"/>
+    <parameter name="platform" value="ANDROID"/>
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="airlines.tests.TestSample">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="BookFlight"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- airlines.tests.TestSample -->
+    </classes>
+  </test> <!-- Grid android chrome Test(failed) -->
 </suite> <!-- Failed suite [Main Test Suite] -->

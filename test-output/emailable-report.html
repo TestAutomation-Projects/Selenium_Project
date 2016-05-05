@@ -31,23 +31,106 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Grid firefox Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">67.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Grid android chrome Test2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">22.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Grid firefox Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">54.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Grid android chrome Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">602.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi_attn">2</td><td class="numi">602.8 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Grid android chrome Test2 &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">airlines.tests.TestSample</td><td><a href="#m1"><b>BookFlight</b>  </a></td><td class="numi">1</td><td>1461951045944</td><td class="numi">6186</td></tr>
 <tr><th colspan="4">Grid firefox Test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">airlines.tests.TestSample</td><td><a href="#m1"><b>BookFlight</b>  </a></td><td class="numi">1</td><td>1461946721722</td><td class="numi">61595</td></tr>
+<tr class="failedodd"><td rowspan="1">airlines.tests.TestSample</td><td><a href="#m2"><b>BookFlight</b>  </a></td><td class="numi">1</td><td>1461951036952</td><td class="numi">48831</td></tr>
+<tr><th colspan="4">Grid android chrome Test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">airlines.tests.TestSample</td><td><a href="#m3"><b>init</b>  </a></td><td class="numi">1</td><td>1461951031948</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Grid android chrome Test &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">airlines.tests.TestSample</td><td><a href="#m4"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1461951634686</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Grid android chrome Test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">airlines.tests.TestSample</td><td><a href="#m5"><b>BookFlight</b>  </a></td><td class="numi">1</td><td>1461951634684</td><td class="numi">1</td></tr>
 </table>
-<h1>Grid firefox Test</h1>
+<h1>Grid android chrome Test2</h1>
 <h2 id="m1">airlines.tests.TestSample:BookFlight</h2>
+<div style="padding-left:3em">
+<p>no such element
+  (Session info: chrome=50.0.2661.89)
+  (Driver info: chromedriver=2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform=Windows NT 10.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 118 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;DESKTOP-FSHKKEO&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=50.0.2661.89, platform=ANDROID, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fc028bdbaf94363430a7267aee67ca2a
+*** Element info: {Using=xpath, value=//input[@name=&apos;tripType&apos; and @value=&apos;roundtrip&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at airlines.pages.FlightFinderPage.TripType(FlightFinderPage.java:61)
+<br/>at airlines.helper.FlightFinderHelper.findFlight(FlightFinderHelper.java:48)
+<br/>at airlines.tests.TestSample.BookFlight(TestSample.java:72)
+<br/>21 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Grid firefox Test</h1>
+<h2 id="m2">airlines.tests.TestSample:BookFlight</h2>
 <div style="padding-left:3em">
 <p>DepartingAirline mismatch expected [true] but found [false]</p>
 org.testng.Assert.fail(Assert.java:94)
 <br/>at org.testng.Assert.failNotEquals(Assert.java:494)
 <br/>at org.testng.Assert.assertTrue(Assert.java:42)
 <br/>at airlines.helper.BookFlightHelper.verifyDepartingAirline(BookFlightHelper.java:43)
-<br/>at airlines.tests.TestSample.BookFlight(TestSample.java:93)
+<br/>at airlines.tests.TestSample.BookFlight(TestSample.java:94)
 <br/>21 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Grid android chrome Test</h1>
+<h2 id="m3">airlines.tests.TestSample:init</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>127.0.0.1</td>
+<td>4725</td>
+<td>ANDROID</td>
+<td>chrome</td>
+<td>null</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="5">
+<p>A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 602.24 seconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;DESKTOP-FSHKKEO&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
+Driver info: io.appium.java_client.android.AndroidDriver</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
+<br/>at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:109)
+<br/>at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:39)
+<br/>at airlines.utils.BaseTest.initDriver(BaseTest.java:35)
+<br/>at airlines.tests.TestSample.init(TestSample.java:43)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">airlines.tests.TestSample:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">airlines.tests.TestSample:BookFlight</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

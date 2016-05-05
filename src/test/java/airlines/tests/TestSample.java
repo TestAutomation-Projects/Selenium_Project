@@ -1,5 +1,7 @@
 package airlines.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.util.Date;
 
@@ -11,6 +13,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -33,13 +36,13 @@ public class TestSample {
 	BookFlightHelper bfh;
 	RemoteWebDriver driver;
 	@BeforeClass
-	@Parameters({"host","port","platform","browserType"})
-	public void init(String host, String port, String platform, String browserType) throws MalformedURLException
+	@Parameters({"host","port","platform","browserType","deviceId"})
+	public void init(String host, String port, String platform, String browserType,@Optional String deviceId) throws MalformedURLException
 	{
 		System.out.println("init");
 		String url="http://"+ host + ":" +   port + "/wd/hub";
 		BaseTest b = new BaseTest();
-		b.initDriver(url,browserType, platform);
+		b.initDriver(url,browserType, platform,deviceId);
 		this.driver=b.getDriver();
 	    driver.get("http://newtours.demoaut.com");
 	    lh=new LoginHelper(driver);
@@ -51,6 +54,7 @@ public class TestSample {
 
 	
 	@Test(priority=1)	
+	
 	public void BookFlight() throws InterruptedException
 	{
 		 System.out.println("bookflight started");
@@ -106,6 +110,7 @@ public class TestSample {
 		System.out.println("bookflight ended");
 	}
 	
+	@AfterMethod
 	@AfterClass
 	public void tearDown()
 	{

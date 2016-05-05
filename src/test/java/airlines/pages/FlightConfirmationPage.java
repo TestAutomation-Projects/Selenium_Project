@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import airlines.utils.BaseTest;
+import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class FlightConfirmationPage {
 	RemoteWebDriver driver;
@@ -17,6 +18,7 @@ public FlightConfirmationPage(RemoteWebDriver driver)
 	PageFactory.initElements(driver, this);
 	
 }
+
 @FindBy(how=How.XPATH, using="//a[@href='mercurysignoff.php']")
 private WebElement btnSignOff;
 

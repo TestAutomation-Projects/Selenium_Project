@@ -24,20 +24,20 @@ public class BaseTest extends RemoteWebDriver implements IDriver {
 	{
 		return driver;
 	}
-	public  void  initDriver(String url,String browser,String platform) throws MalformedURLException
+	public  void  initDriver(String url,String browser,String platform,String deviceId) throws MalformedURLException
 	  {
 		  if(platform.equalsIgnoreCase("WINDOWS"))
 		  {
-		      this.driver= new RemoteWebDriver(new URL(url),getBrowserCapability(platform,browser));
+		      this.driver= new RemoteWebDriver(new URL(url),getBrowserCapability(platform,browser,deviceId));
 		  }
 		  else if(platform.equalsIgnoreCase("ANDROID"))
 		  {
-			  this.driver= new AndroidDriver(new URL(url), getBrowserCapability(platform,browser));
+			  this.driver= new AndroidDriver(new URL(url), getBrowserCapability(platform,browser,deviceId));
 
 		  }
 		  else if(platform.equalsIgnoreCase("IOS"))
 		  {
-			  this.driver=new IOSDriver(new URL(url), getBrowserCapability(platform,browser));
+			  this.driver=new IOSDriver(new URL(url), getBrowserCapability(platform,browser,deviceId));
 		  }
 		  
 	  }
@@ -106,7 +106,7 @@ public class BaseTest extends RemoteWebDriver implements IDriver {
 		// TODO Auto-generated method stub
 		return driver.switchTo();
 	}
-	public  DesiredCapabilities getBrowserCapability(String platform,String browserType)
+	public  DesiredCapabilities getBrowserCapability(String platform,String browserType,String deviceId)
 	  {
 		 if(platform.equalsIgnoreCase("WINDOWS"))
 		 {
@@ -146,7 +146,7 @@ public class BaseTest extends RemoteWebDriver implements IDriver {
 				  }
 			    capabilities.setCapability("CapabilityType.VERSION", "4.3");
 				capabilities.setCapability("platformName","Android");
-				capabilities.setCapability("deviceName","1e1578fe");
+				capabilities.setCapability("deviceName",deviceId);
 
 	            return capabilities;
 	 
